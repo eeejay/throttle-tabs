@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="tabs.css"/>
+  </head>
+
+<body>
+  <div class="panel-section panel-section-formElements maxes">
+    <div class="panel-formElements-item browser-style spinner">
+      <label id="tabs-limit">Tabs Limit</label>
+      <input type="image" alt="Decrease" src="minus.svg" aria-controls="max-tabs" class="decrement-button">
+      <input type="number" value="10" max="100" min="3" id="max-tabs" aria-labelledby="tabs-limit">
+      <input type="image" alt="Increase" src="plus.svg" aria-controls="max-tabs" class="increment-button">
+    </div>
+    <div class="panel-formElements-item browser-style spinner">
+      <input type="checkbox" id="enable-overflow-limit">
+      <label id="overflow-limit" for="enable-overflow-limit">Overflow Limit</label>
+      <input type="image" alt="Decrease" src="minus.svg" aria-controls="max-overflow" class="decrement-button">
+      <input type="number" value="50" max="999" min="0" id="max-overflow" aria-labelledby="overflow-limit">
+      <input type="image" alt="Increase" src="plus.svg" aria-controls="max-overflow" class="increment-button">
+    </div>
+  </div>
+  <div class="panel-section-separator"></div>
+  <div role="menu" class="panel-section panel-section-list" id="hidden-tabs-list">
+  </div>
+
+  <template id="panel-item">
+    <a href="#" role="menuitem" class="panel-list-item">
+      <img class="icon">
+      <div class="text" role="presentation"></div>
+      <div class="text-shortcut"></div>
+    </a>
+  </template>
+
+  <script src="tabs.js"></script>
+</body>
+
+</html>

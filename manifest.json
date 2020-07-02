@@ -1,0 +1,49 @@
+{
+  "background": {
+      "scripts": ["background.js"]
+  },
+  "browser_action": {
+    "browser_style": true,
+    "default_title": "Throttle Tabs",
+    "default_popup": "tabs.html",
+    "default_icon": "icon-light.svg",
+    "theme_icons": [{
+      "light": "icon-dark.svg",
+      "dark": "icon-light.svg",
+      "size": 16
+      },{
+        "light": "icon-dark.svg",
+        "dark": "icon-light.svg",
+        "size": 32
+      }],
+      "default_area": "tabstrip"
+  },
+  "description": "Don't let your tabs get out of control",
+  "homepage_url": "https://github.com/eeejay/throttle-tabs",
+  "manifest_version": 2,
+  "name": "Throttle Tabs",
+  "icons": {
+    "48": "icon-light.svg",
+    "96": "icon-light.svg"
+  },
+  "permissions": [
+    "tabs",
+    "tabHide",
+    "sessions"
+  ],
+  "version": "0.1",
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Alt+Shift+Z"
+      },
+      "description": "Open hidden tabs menu"
+    }
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "throttle-tabs@monotonous.org",
+      "strict_min_version": "75.0"
+    }
+  }
+}

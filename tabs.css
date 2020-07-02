@@ -1,0 +1,121 @@
+html, body {
+  width: 350px;
+}
+
+.switch-tabs {
+  padding-left: 10px;
+}
+
+.switch-tabs a {
+  display: block;
+}
+
+.panel {
+  margin: 5px;
+}
+
+a.panel-list-item {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+a.panel-list-item:focus {
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.06);
+  border-block: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.panel-list-item > .text {
+  text-overflow: ellipsis;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.panel-list-item > .icon {
+  height: 16px;
+  margin: 0 6px 0 0;
+  width: 16px;
+}
+
+.panel-list-item > .icon:not([src]) {
+  visibility: hidden;
+}
+
+/* Fields */
+/* .panel-section-formElements.maxes {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.panel-section-formElements.maxes > .panel-formElements-item {
+  margin: 0;
+} */
+
+.panel-formElements-item > label:first-child {
+  margin-left: 22px;
+}
+
+.browser-style > input[type="number"] {
+  -moz-appearance: textfield;
+  box-shadow: 0 0 0 0 rgba(97, 181, 255, 0);
+  font: caption;
+  padding: 0 6px 0;
+  transition-duration: 250ms;
+  transition-property: box-shadow;
+  box-sizing: border-box;
+  width: 36px;
+  height: 15px;
+  line-height: 15px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: 0 1rem;
+  border-radius: 10px;
+  border: 1px solid rgb(215, 215, 219);
+  background-color: #edecf0;
+  font-size: 11px;
+  text-align: center;
+}
+
+.browser-style > input[type="number"]:disabled {
+  color: #999;
+  opacity: .5;
+}
+
+.browser-style > input[type="number"].focused {
+  box-shadow: 0 0 0 2px rgba(97, 181, 255, 0.75);
+}
+
+/* Interactive States */
+
+.browser-style > input[type="number"]:focus,
+.browser-style > input[type="number"]:focus:hover {
+  box-shadow: 0 0 0 2px rgba(97, 181, 255, 0.75);
+}
+
+.browser-style > input[type="number"]:invalid:not(:focus) {
+  box-shadow: 0 0 0 1px var(--red-60),
+    0 0 0 4px rgba(251, 0, 34, 0.3);
+}
+
+.spinner > input[type="image"] {
+  height: 0.75rem;
+}
+
+.spinner > input[type="image"]:disabled {
+  opacity: 0.3;
+}
+
+.spinner > label {
+  text-align: initial;
+  flex-grow: 1;
+}
+
+.spinner > input[type="checkbox"] {
+  height: 16px;
+  margin: 0 6px 0 0;
+  width: 16px;
+}

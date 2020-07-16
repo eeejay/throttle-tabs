@@ -18,6 +18,21 @@ body {
   margin: 5px;
 }
 
+#overflow-heading {
+  padding-right: 6px;
+  margin-top: 4px;
+}
+
+#list-container:not(.has-tabs) > #overflow-heading {
+  display: none;
+}
+
+button#close-overflow {
+  height: 20px;
+  font-size: 11px;
+  margin-bottom: 0;
+}
+
 #list-container {
   overflow: auto;
 }
@@ -35,7 +50,6 @@ a.panel-list-item:focus {
 
 .panel-list-item > .text {
   text-overflow: ellipsis;
-  width: 100%;
   overflow: hidden;
   white-space: nowrap;
   pointer-events: none;

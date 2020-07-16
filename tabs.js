@@ -19,6 +19,7 @@ async function updateUI() {
   if (overflow_list != tabs.map(t => t.id).join(",")) {
     let tabsList = document.getElementById('hidden-tabs-list');
     tabsList.textContent = "";
+    document.getElementById("list-container").classList.toggle("has-tabs", !!tabs.length);
     for (let tab of tabs) {
       let item = document.getElementById("panel-item").content.cloneNode(true);
       item.querySelector(".text").textContent = tab.title;
@@ -91,6 +92,12 @@ document.getElementById('hidden-tabs-list').addEventListener("keydown", function
   }
 
   items[nextIndex].focus();
+});
+
+document.getElementById('close-overflow').addEventListener("click", async () => {
+  let tabs = await browser.tabs.query({currentWindow: true, hidden: true});
+  await browser.tabs.remove(tabs.map(({ id }) => id));
+  window.close();
 });
 
 async function updateSettings() {

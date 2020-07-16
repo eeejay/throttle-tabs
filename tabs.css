@@ -2,6 +2,10 @@ html, body {
   width: 350px;
 }
 
+body {
+  max-height: 600px;
+}
+
 .switch-tabs {
   padding-left: 10px;
 }
@@ -12,6 +16,10 @@ html, body {
 
 .panel {
   margin: 5px;
+}
+
+#list-container {
+  overflow: auto;
 }
 
 a.panel-list-item {

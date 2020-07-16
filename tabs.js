@@ -64,7 +64,7 @@ for (let input of document.querySelectorAll("input[type=number]")) {
 }
 
 function updateOverflowControls() {
-  checkbox = document.getElementById("enable-overflow-limit");
+  let checkbox = document.getElementById("enable-overflow-limit");
   for (let input of checkbox.parentElement.querySelectorAll("input:not([type=checkbox])")) {
     input.disabled = !checkbox.checked;
   }

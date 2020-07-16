@@ -37,9 +37,18 @@ button#close-overflow {
   overflow: auto;
 }
 
+.ctx-indicator {
+  position: absolute;
+  left: 0;
+  top: 4px;
+  height: 16px;
+  width: 3px;
+}
+
 a.panel-list-item {
   color: inherit;
   text-decoration: inherit;
+  position: relative;
 }
 
 a.panel-list-item:focus {

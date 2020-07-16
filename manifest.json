@@ -29,7 +29,9 @@
   "permissions": [
     "tabs",
     "tabHide",
-    "sessions"
+    "sessions",
+    "contextualIdentities",
+    "cookies"
   ],
   "version": "0.1",
   "commands": {

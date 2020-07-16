@@ -20,11 +20,22 @@ async function updateUI() {
     let tabsList = document.getElementById('hidden-tabs-list');
     tabsList.textContent = "";
     document.getElementById("list-container").classList.toggle("has-tabs", !!tabs.length);
+
+    let ctxIds = await browser.contextualIdentities.query({});
+    let ctxLabels = Object.fromEntries(ctxIds.map(e => {
+        return [e.cookieStoreId, { color: e.colorCode, name: e.name }];
+    }));
     for (let tab of tabs) {
       let item = document.getElementById("panel-item").content.cloneNode(true);
       item.querySelector(".text").textContent = tab.title;
       if (tab.favIconUrl) {
         item.querySelector(".icon").src = tab.favIconUrl;
+      }
+      let ctx = ctxLabels[tab.cookieStoreId];
+      if (ctx) {
+        let ctxIndicator = item.querySelector(".ctx-indicator");
+        ctxIndicator.style.backgroundColor = ctx.color;
+        ctxIndicator.setAttribute("aria-label", ctx.name);
       }
       item.querySelector(".panel-list-item").addEventListener("click", () => showTab(tab.id));
       tabsList.appendChild(item);

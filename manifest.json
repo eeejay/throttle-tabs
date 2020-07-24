@@ -23,8 +23,8 @@
   "manifest_version": 2,
   "name": "Throttle Tabs",
   "icons": {
-    "48": "icon-light.svg",
-    "96": "icon-light.svg"
+    "48": "logo.svg",
+    "96": "logo.svg"
   },
   "permissions": [
     "tabs",

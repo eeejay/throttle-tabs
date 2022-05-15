@@ -6,4 +6,4 @@ It allows you to limit your tabs to a set maximum. After the max number of tabs 
 
 ## Why?
 
-There are only that many tabs that a human can keep track of.
+[There are only that many tabs that a human can keep track of.](http://blog.monotonous.org/2020/07/21/this-is-how-i-surf-the-internet/)
